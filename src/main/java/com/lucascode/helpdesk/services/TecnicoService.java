@@ -1,5 +1,6 @@
 package com.lucascode.helpdesk.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,10 @@ public class TecnicoService {
 		    Optional<Tecnico> object = tecnicoRepository.findById(id);
 		    return object.orElseThrow(() -> new ObjectNotFoundExcption("Tecnico não encontrado com o id: " + id));
 		  }
+
+	public List<Tecnico> findAll() {
+		// TODO Auto-generated method stub
+		return tecnicoRepository.findAll();
+	}
 	
 }
