@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.lucascode.helpdesk.domain.Tecnico;
 import com.lucascode.helpdesk.domain.enums.Perfil;
@@ -16,9 +18,17 @@ public class TecnicoDTO implements Serializable{
 	
 	
 	protected Integer id;
+	
+	@NotNull(message = "O campo Nome é requerido")
 	protected String nome;
+	
+	@NotNull(message = "O campo cpf é requerido")
 	protected String cpf;
+	
+	@NotNull(message = "O campo Email é requerido")
 	protected String email;
+	
+	@NotNull(message = "O campo senha é requerido")
 	protected String senha;
 	protected Set<Integer> perfis = new HashSet<>();
 	
