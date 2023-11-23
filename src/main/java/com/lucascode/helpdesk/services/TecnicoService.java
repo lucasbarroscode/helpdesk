@@ -14,6 +14,8 @@ import com.lucascode.helpdesk.repositories.TecnicoRepository;
 import com.lucascode.helpdesk.services.exceptions.DataIntegrityViolationException;
 import com.lucascode.helpdesk.services.exceptions.ObjectNotFoundExcption;
 
+import javax.validation.Valid;
+
 @Service
 public class TecnicoService {
 
@@ -40,6 +42,14 @@ public class TecnicoService {
 		return tecnicoRepository.save(newObj);
 	}
 
+	public Tecnico update(Integer id, @Valid TecnicoDTO objDTO) {
+		objDTO.setId(id);
+		Tecnico oldObj = findById(id);
+		validaPorCPFEEmail(objDTO);
+		oldObj = new Tecnico(objDTO);
+		return pessoaRepository.save(oldObj);
+	}
+
 	private void validaPorCPFEEmail(TecnicoDTO objDTO) {
 		Optional<Pessoa> obj = pessoaRepository.findByCpf(objDTO.getCpf());
 		if(obj.isPresent() && obj.get().getId() != objDTO.getId()) {
@@ -52,5 +62,6 @@ public class TecnicoService {
 		}
 		
 	}
-	
+
+
 }
