@@ -6,7 +6,7 @@ import com.lucascode.helpdesk.domain.dto.ClienteDTO;
 import com.lucascode.helpdesk.repositories.PessoaRepository;
 import com.lucascode.helpdesk.repositories.ClienteRepository;
 import com.lucascode.helpdesk.services.exceptions.DataIntegrityViolationException;
-import com.lucascode.helpdesk.services.exceptions.ObjectNotFoundExcption;
+import com.lucascode.helpdesk.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +25,7 @@ public class ClienteService {
 	 
 	 public Cliente findById(Integer id) {
 		    Optional<Cliente> object = tecnicoRepository.findById(id);
-		    return object.orElseThrow(() -> new ObjectNotFoundExcption("Cliente não encontrado com o id: " + id));
+		    return object.orElseThrow(() -> new ObjectNotFoundException("Cliente não encontrado com o id: " + id));
 		  }
 
 	public List<Cliente> findAll() {

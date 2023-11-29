@@ -12,7 +12,7 @@ import com.lucascode.helpdesk.domain.dto.TecnicoDTO;
 import com.lucascode.helpdesk.repositories.PessoaRepository;
 import com.lucascode.helpdesk.repositories.TecnicoRepository;
 import com.lucascode.helpdesk.services.exceptions.DataIntegrityViolationException;
-import com.lucascode.helpdesk.services.exceptions.ObjectNotFoundExcption;
+import com.lucascode.helpdesk.services.exceptions.ObjectNotFoundException;
 
 import javax.validation.Valid;
 
@@ -27,7 +27,7 @@ public class TecnicoService {
 	 
 	 public Tecnico findById(Integer id) {
 		    Optional<Tecnico> object = tecnicoRepository.findById(id);
-		    return object.orElseThrow(() -> new ObjectNotFoundExcption("Tecnico não encontrado com o id: " + id));
+		    return object.orElseThrow(() -> new ObjectNotFoundException("Tecnico não encontrado com o id: " + id));
 		  }
 
 	public List<Tecnico> findAll() {
