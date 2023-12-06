@@ -3,6 +3,7 @@ package com.lucascode.helpdesk.domain.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.lucascode.helpdesk.domain.Chamado;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -14,11 +15,17 @@ public class ChamadoDTO implements Serializable {
     private LocalDate dataAbertura = LocalDate.now();
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataFechamento;
+    @NotNull(message = "O campo prioridade nao pode ser nulo")
     private Integer prioridade;
+    @NotNull(message = "O campo status nao pode ser nulo")
     private Integer status;
+    @NotNull(message = "O campo titulo nao pode ser nulo")
     private String titulo;
+    @NotNull(message = "O campo observacoes nao pode ser nulo")
     private String observacoes;
+    @NotNull(message = "O campo tecnico nao pode ser nulo")
     private Integer tecnico;
+    @NotNull(message = "O campo cliente nao pode ser nulo")
     private Integer cliente;
     private  String nomeTecnico;
     private  String nomeCliente;
