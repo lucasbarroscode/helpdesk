@@ -1,4 +1,7 @@
 # Sistema de Helpdesk
+<p align="start">
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
 :construction: Projeto em construção :construction:
  - Finalizar Testes Unitarios
@@ -10,19 +13,28 @@ Projeto em desenvolvimento para estudos. o Sistema ira permitir o Crud de Client
 
 
 # :hammer: Funcionalidades do projeto
- - Clientes
-  - CRUD Clientes
+ - Funcionalidade 1:  CRUD Clientes
+  
 
- - Tecnico
-  -CRUD Tecnicos - Se ele tiver o perfil de admin
+ - Funcionalidade 2:  CRUD Tecnicos (So sera possivel se ele tiver o perfil de admin)
+  
 
- - Chamados
-  -CRU Chamados
-  - Chamado nao tera o request DELETE pois, tem o Status Encerrado.
+ - Funcionalidade 3: CRU Chamados
+ - Funcionalidade 3a: Chamado nao tera o request DELETE pois, tem o Status Encerrado.
 
- - Token
-  -Geracao de token para fazer as request
+ - Funcionalidade 4: Geracao de token para fazer as request
 
+# 🛠️ Abrir e rodar o projeto
 
+Após baixar o projeto, 
+ - você podera abrir com o Intelij a pasta do backend e executar o App via IDE.
+ - Exemplo das collections para fazer os requests do projeto. 
+[helpdesk.postman_collection.json](https://github.com/lucasbarroscode/helpdesk/files/13707742/helpdesk.postman_collection.json)
 
-[helpdesk.postman_collection.json](https://github.com/lucasbarroscode/helpdesk/files/13704124/helpdesk.postman_collection.json)
+# ✔️ Técnicas e tecnologias utilizadas
+  -  Java 11
+  -  Maven 2.6.2
+  -  h2 DataBase
+  -  My SQL
+  -  JWT
+  -  InteliJ IDEA
