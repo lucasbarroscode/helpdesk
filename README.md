@@ -1,10 +1,5 @@
 # Sistema de Helpdesk
 Projeto feito para simular um sistema de helpdesk, podendo cadastrar chamados, clientes e tecnicos.
-<p align="start">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
-
-
 
 :construction: Projeto em construção :construction:
  - Finalizar Testes Unitarios
