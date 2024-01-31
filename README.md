@@ -1,7 +1,7 @@
 # Sistema de Helpdesk
 Projeto feito para simular um sistema de helpdesk, podendo cadastrar chamados, clientes e tecnicos.
 
-:construction: Projeto em construção :construction:
+:soon: Proximas etapas do desenvolvimento :soon:
  - Finalizar Testes Unitarios
  - Finalizar Front
 
